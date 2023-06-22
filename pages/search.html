@@ -1,0 +1,28 @@
+<%- include('partials/header.html') %>
+
+  <section class="other-news">
+    <div class="title-other-news">
+      <h2>Busca <span style="font-weight: 200;">Caramelo</span><b>News</b></h2>
+      <br><br>
+      <div class="center">
+        <div style="width: 100%;" class="more-read">
+          <h3><%= count %></h3>
+       
+              <% for(let i=0; i < posts.length; i++){ %>
+                <div class="more-read-news-single">
+                  <img src="<%= posts[i].image %>" />
+                  <div class="text-more-read-single">
+                    <h4>
+                      <%= posts[i].title %>
+                    </h4>
+                    <p><%- posts[i].shortDescription %>...</p>
+                    <a href="<%= posts[i].slug %>">Saiba mais</a>
+                  </div>
+                </div>
+                <% } %>
+            </div>
+         
+      </div>
+    </div>
+  </section>
+  <%- include('partials/footer.html') %>
